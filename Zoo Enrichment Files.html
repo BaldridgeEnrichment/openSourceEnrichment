@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoo Enrichment Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f5f2eb;
+      --surface:   #fdfcf8;
+      --surface2:  #f0ede4;
+      --border:    #d8d3c6;
+      --border2:   #c8c2b2;
+      --text:      #1e1c18;
+      --text2:     #5a5648;
+      --text3:     #8a8474;
+      --accent:    #3b6d11;
+      --accent-bg: #eaf3de;
+      --accent-dk: #27500a;
+      --tool-bg:   #e8f0fb;
+      --tool-text: #1a4a8a;
+      --tool-bdr:  #b5cef0;
+      --amber-bg:  #faeeda;
+      --amber-txt: #854f0b;
+      --coral-bg:  #faece7;
+      --coral-txt: #993c1d;
+      --radius:    10px;
+      --radius-lg: 14px;
+      --shadow:    0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── Layout ───────────────────────────────────────────── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .site-header {
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .header-inner { display: flex; align-items: flex-start; gap: 20px; }
+    .header-logo {
+      width: 52px; height: 52px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .header-logo svg { width: 28px; height: 28px; fill: #fff; }
+    .header-text h1 {
+      font-family: 'Bitter', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .header-text p {
+      color: var(--text2);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    .header-badge {
+      margin-top: 10px;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-bg);
+      color: var(--accent-dk);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .header-badge svg { width: 12px; height: 12px; fill: currentColor; }
+
+    /* ── Sidebar + Content layout ─────────────────────────── */
+    .main-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+
+    @media (max-width: 760px) {
+      .main-layout { grid-template-columns: 1fr; }
+    }
+
+    /* ── Filter Panel ─────────────────────────────────────── */
+    .filter-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      position: sticky;
+      top: 24px;
+    }
+    .filter-panel-title {
+      font-family: 'Bitter', serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .filter-group { margin-bottom: 20px; }
+    .filter-group:last-child { margin-bottom: 0; }
+    .filter-group-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text3);
+      margin-bottom: 8px;
+    }
+    .filter-group-hint {
+      font-size: 11px;
+      color: var(--text3);
+      margin-bottom: 8px;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    /* Tag button styles */
+    .tag-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 400;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text2);
+      transition: all 0.12s ease;
+      user-select: none;
+      line-height: 1.4;
+    }
+    .tag-btn:hover { border-color: var(--border2); color: var(--text); background: #e8e4da; }
+
+    /* Tool tags — blue */
+    .tag-btn.tool-tag.active  { background: var(--tool-bg); border-color: var(--tool-bdr); color: var(--tool-text); font-weight: 500; }
+    /* Taxa tags — green */
+    .tag-btn.taxa-tag.active  { background: var(--accent-bg); border-color: #9fd468; color: var(--accent-dk); font-weight: 500; }
+    /* Behavior tags — amber */
+    .tag-btn.behav-tag.active { background: var(--amber-bg); border-color: #e8b96a; color: var(--amber-txt); font-weight: 500; }
+    /* Complexity tags — coral */
+    .tag-btn.level-tag.active { background: var(--coral-bg); border-color: #e8a98a; color: var(--coral-txt); font-weight: 500; }
+
+    .filter-divider { height: 1px; background: var(--border); margin: 18px 0; }
+
+    .clear-btn {
+      width: 100%;
+      padding: 7px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text3);
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.12s;
+      margin-top: 4px;
+    }
+    .clear-btn:hover { background: var(--surface2); color: var(--text2); }
+
+    /* ── Results area ─────────────────────────────────────── */
+    .results-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .results-count { font-size: 13px; color: var(--text3); }
+    .results-count strong { color: var(--text2); }
+
+    /* ── Cards ────────────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+      animation: fadeIn 0.2s ease both;
+    }
+    .project-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-2px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .card-complexity {
+      font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 2px 8px; border-radius: 10px; flex-shrink: 0; margin-top: 2px;
+    }
+    .card-complexity.Simple    { background: var(--accent-bg); color: var(--accent-dk); }
+    .card-complexity.Intermediate { background: var(--amber-bg); color: var(--amber-txt); }
+    .card-complexity.Complex   { background: var(--coral-bg); color: var(--coral-txt); }
+
+    .card-title {
+      font-family: 'Bitter', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .card-zoo { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+    .card-description {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .card-tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: var(--surface2);
+      color: var(--text2);
+      border: 1px solid var(--border);
+    }
+    .card-tag.tool  { background: var(--tool-bg);  color: var(--tool-text); border-color: var(--tool-bdr); }
+    .card-tag.taxa  { background: var(--accent-bg); color: var(--accent-dk); border-color: #b8e095; }
+    .card-tag.behav { background: var(--amber-bg);  color: var(--amber-txt); border-color: #e8b96a; }
+
+    .card-divider { height: 1px; background: var(--border); }
+
+    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .file-badges { display: flex; gap: 4px; flex-wrap: wrap; }
+    .file-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; font-weight: 500;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text3);
+      border: 1px solid var(--border);
+      letter-spacing: 0.02em;
+    }
+
+    .download-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 14px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius);
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.12s, transform 0.1s;
+      flex-shrink: 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .download-btn:hover { background: var(--accent-dk); transform: translateY(-1px); }
+    .download-btn svg { width: 12px; height: 12px; fill: currentColor; flex-shrink: 0; }
+
+    /* Notes tooltip */
+    .card-notes {
+      font-size: 12px;
+      color: var(--text3);
+      font-style: italic;
+      padding: 6px 10px;
+      background: var(--surface2);
+      border-radius: 6px;
+      border-left: 3px solid var(--border2);
+    }
+
+    /* Species list */
+    .species-list { font-size: 12px; color: var(--text3); }
+    .species-list span { margin-right: 4px; }
+
+    /* Safety concerns */
+    .safety-pill {
+      font-size: 11px; padding: 2px 8px; border-radius: 10px;
+      background: #fff3cd; color: #856404; border: 1px solid #ffc107;
+    }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text3);
+    }
+    .empty-state svg { width: 48px; height: 48px; fill: var(--border2); margin-bottom: 16px; display: block; margin-inline: auto; }
+    .empty-state p { font-size: 14px; margin-top: 8px; }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    .site-footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text3);
+      text-align: center;
+    }
+    .site-footer a { color: var(--text3); }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo" aria-hidden="true">
+        <!-- Paw icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 13.5c-2.33 0-7 1.17-7 3.5v1.5h14V17c0-2.33-4.67-3.5-7-3.5zM5.5 9c.83 0 1.5-.67 1.5-1.5S6.33 6 5.5 6 4 6.67 4 7.5 4.67 9 5.5 9zm13 0c.83 0 1.5-.67 1.5-1.5S19.33 6 18.5 6 17 6.67 17 7.5 17.67 9 18.5 9zm-6.5 1c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM12 12c-2.21 0-4 1.79-4 4h8c0-2.21-1.79-4-4-4z"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h1>Zoo Enrichment Library</h1>
+        <p>Open-source fabrication files for animal care professionals — free to download, adapt, and share.</p>
+        <span class="header-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          Open Source · Memphis Zoo
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-layout">
+
+    <!-- ── Filter Sidebar ───────────────────────────────── -->
+    <aside class="filter-panel" aria-label="Filter projects">
+      <div class="filter-panel-title">Filter Projects</div>
+
+      <!-- Tools — inclusive AND logic -->
+      <div class="filter-group">
+        <div class="filter-group-label">Tools I have access to</div>
+        <div class="filter-group-hint">Select the tools available to you — results will only show projects you can actually make.</div>
+        <div class="tag-list" id="tool-tags"></div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <!-- Taxa — OR logic -->
+      <div class="filter-group">
+        <div class="filter-group-label">Animal group</div>
+        <div class="filter-group-hint">Show projects for any of the selected groups.</div>
+        <div class="tag-list" id="taxa-tags"></div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <!-- Behavior — OR logic -->
+      <div class="filter-group">
+        <div class="filter-group-label">Target behavior</div>
+        <div class="filter-group-hint">Show projects targeting any of these behaviors.</div>
+        <div class="tag-list" id="behav-tags"></div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <!-- Complexity — OR logic -->
+      <div class="filter-group">
+        <div class="filter-group-label">Complexity</div>
+        <div class="tag-list" id="level-tags"></div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <button class="clear-btn" id="clear-btn" onclick="clearFilters()">Clear all filters</button>
+    </aside>
+
+    <!-- ── Main content ──────────────────────────────────── -->
+    <main>
+      <div class="results-header">
+        <div class="results-count" id="results-count"></div>
+      </div>
+      <div class="card-grid" id="card-grid"></div>
+    </main>
+
+  </div><!-- end main-layout -->
+
+  <footer class="site-footer">
+    <p>Zoo Enrichment Library · Open source under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> · <a href="https://github.com/" target="_blank">Contribute on GitHub</a></p>
+  </footer>
+
+</div><!-- end page -->
+
+<!-- Load project data -->
+<script src="projects.js"></script>
+
+<script>
+// ============================================================
+//  FILTER ENGINE
+//  ─ Tools uses INCLUSIVE AND logic:
+//    if tools are selected, only show projects whose required
+//    tools are ALL contained within the user's selected set.
+//    (i.e. "I have these tools" — hide anything I can't make)
+//  ─ Taxa, Behavior, Complexity use OR logic:
+//    show projects matching ANY of the selected values.
+// ============================================================
+
+const activeFilters = {
+  tools:  new Set(),  // inclusive AND
+  taxa:   new Set(),  // OR
+  behav:  new Set(),  // OR
+  level:  new Set()   // OR
+};
+
+// ── Build tag sets from project data ──────────────────────
+function uniqueSorted(arr) {
+  return [...new Set(arr.flat())].filter(Boolean).sort();
+}
+const allTools  = uniqueSorted(PROJECTS.map(p => p.tools));
+const allTaxa   = uniqueSorted(PROJECTS.map(p => p.taxa));
+const allBehav  = uniqueSorted(PROJECTS.map(p => p.targetBehavior));
+const allLevels = ["Simple", "Intermediate", "Complex Kit"];
+
+// ── Render filter buttons ─────────────────────────────────
+function renderTags(containerId, values, filterKey, cssClass) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = '';
+  values.forEach(val => {
+    const btn = document.createElement('button');
+    btn.className = `tag-btn ${cssClass}`;
+    btn.textContent = val;
+    btn.dataset.val = val;
+    btn.dataset.key = filterKey;
+    btn.setAttribute('aria-pressed', 'false');
+    btn.onclick = () => toggleTag(btn, filterKey, val, cssClass);
+    el.appendChild(btn);
+  });
+}
+
+function toggleTag(btn, key, val, cssClass) {
+  if (activeFilters[key].has(val)) {
+    activeFilters[key].delete(val);
+    btn.className = `tag-btn ${cssClass}`;
+    btn.setAttribute('aria-pressed', 'false');
+  } else {
+    activeFilters[key].add(val);
+    btn.className = `tag-btn ${cssClass} active`;
+    btn.setAttribute('aria-pressed', 'true');
+  }
+  renderCards();
+}
+
+function clearFilters() {
+  Object.values(activeFilters).forEach(s => s.clear());
+  document.querySelectorAll('.tag-btn').forEach(b => {
+    b.className = b.className.replace(' active', '');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  renderCards();
+}
+
+// ── Filter logic ──────────────────────────────────────────
+function projectMatches(p) {
+  // TOOLS — inclusive AND: user's selected tools must cover all project tools
+  if (activeFilters.tools.size > 0) {
+    const hasAll = p.tools.every(t => activeFilters.tools.has(t));
+    if (!hasAll) return false;
+  }
+  // TAXA — OR
+  if (activeFilters.taxa.size > 0) {
+    const match = p.taxa.some(t => activeFilters.taxa.has(t));
+    if (!match) return false;
+  }
+  // BEHAVIOR — OR
+  if (activeFilters.behav.size > 0) {
+    const match = p.targetBehavior.some(b => activeFilters.behav.has(b));
+    if (!match) return false;
+  }
+  // COMPLEXITY — OR
+  if (activeFilters.level.size > 0) {
+    if (!activeFilters.level.has(p.complexity)) return false;
+  }
+  return true;
+}
+
+// ── Render cards ──────────────────────────────────────────
+function fileBadgeHTML(files) {
+  return files.map(f => `<span class="file-badge">${f}</span>`).join('');
+}
+
+function complexityClass(c) {
+  if (c === 'Simple') return 'Simple';
+  if (c === 'Intermediate') return 'Intermediate';
+  return 'Complex';
+}
+
+function renderCards() {
+  const grid = document.getElementById('card-grid');
+  const countEl = document.getElementById('results-count');
+  const visible = PROJECTS.filter(projectMatches);
+
+  grid.innerHTML = '';
+
+  if (visible.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24"><path d="M11 15h2v2h-2v-2zm0-8h2v6h-2V7zm1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8z"/></svg>
+        <strong>No projects match your current filters.</strong>
+        <p>Try removing a filter or <button onclick="clearFilters()" style="background:none;border:none;color:var(--accent);cursor:pointer;font-size:14px;padding:0;text-decoration:underline;">clearing all</button> to browse everything.</p>
+      </div>`;
+    countEl.innerHTML = `<strong>0</strong> projects`;
+    return;
+  }
+
+  countEl.innerHTML = `Showing <strong>${visible.length}</strong> of ${PROJECTS.length} projects`;
+
+  visible.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.style.animationDelay = `${i * 40}ms`;
+
+    const toolTags  = p.tools.map(t => `<span class="card-tag tool">${t}</span>`).join('');
+    const taxaTags  = p.taxa.map(t => `<span class="card-tag taxa">${t}</span>`).join('');
+    const behavTags = p.targetBehavior.map(b => `<span class="card-tag behav">${b}</span>`).join('');
+    const speciesTxt = p.species.length ? `<div class="species-list">🐾 ${p.species.map(s=>`<span>${s}</span>`).join(' · ')}</div>` : '';
+    const notesHTML = p.notes ? `<div class="card-notes">💡 ${p.notes}</div>` : '';
+    const downloadDisabled = p.downloadUrl === '#';
+
+    card.innerHTML = `
+      <div class="card-header">
+        <div>
+          <div class="card-title">${p.title}</div>
+          <div class="card-zoo">${p.contributorZoo}</div>
+        </div>
+        <span class="card-complexity ${complexityClass(p.complexity)}">${p.complexity}</span>
+      </div>
+      <div class="card-description">${p.description}</div>
+      ${speciesTxt}
+      <div class="card-tags">${toolTags}${taxaTags}${behavTags}</div>
+      ${notesHTML}
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="file-badges">${fileBadgeHTML(p.files)}</div>
+        <a class="download-btn"
+           href="${p.downloadUrl}"
+           ${downloadDisabled ? 'onclick="return false;" title="Files coming soon"' : 'target="_blank"'}
+           style="${downloadDisabled ? 'opacity:0.5;cursor:not-allowed;' : ''}">
+          <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18v12.17l-3.59-3.58L7 12l5 5 5-5-1.41-1.41L13 14.17V2h-1z"/></svg>
+          ${downloadDisabled ? 'Files soon' : 'Download'}
+        </a>
+      </div>`;
+
+    grid.appendChild(card);
+  });
+}
+
+// ── Init ──────────────────────────────────────────────────
+renderTags('tool-tags',  allTools,  'tools',  'tool-tag');
+renderTags('taxa-tags',  allTaxa,   'taxa',   'taxa-tag');
+renderTags('behav-tags', allBehav,  'behav',  'behav-tag');
+renderTags('level-tags', allLevels, 'level',  'level-tag');
+renderCards();
+</script>
+
+</body>
+</html>
