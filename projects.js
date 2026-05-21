@@ -10,9 +10,9 @@ const PROJECTS = [
     targetBehavior: ["Foraging"],
     species: ["Slow loris", "Azure-winged magpie", "Bush baby"],
     complexity: "Simple",
-    files: ["3MF"],
+    files: ["STL"],
     notes: "",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/cric-o-nut/cric_o_nut.stl"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/cric-o-nut"
   },
   {
     id: "pyramid",
@@ -25,9 +25,9 @@ const PROJECTS = [
     targetBehavior: ["Foraging", "Climbing"],
     species: ["Ruffed lemur", "Guenon"],
     complexity: "Simple",
-    files: ["3MF"],
+    files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/pyramid"
   },
   {
     id: "lotus-pod",
@@ -40,9 +40,9 @@ const PROJECTS = [
     targetBehavior: ["Foraging", "Object Manipulation", "Extractive Foraging"],
     species: [],
     complexity: "Simple",
-    files: ["3MF"],
+    files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/lotus-pod"
   },
   {
     id: "table-barriers",
@@ -55,9 +55,9 @@ const PROJECTS = [
     targetBehavior: ["Presentation", "Exploration", "Animal Health"],
     species: ["Indian star tortoise", "Pancake tortoise", "Legless lizard", "Blue-tongue skink", "Hedgehog tenrec"],
     complexity: "Complex Kit",
-    files: ["3MF", "PDF", "DXF", "BOM"],
+    files: ["STL", "PDF", "DXF", "BOM"],
     notes: "",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/table-barriers"
   },
   {
     id: "frut",
@@ -70,9 +70,9 @@ const PROJECTS = [
     targetBehavior: ["Foraging", "Ripping and Tearing", "Food Processing"],
     species: ["Guenon", "Azure-winged magpie"],
     complexity: "Simple",
-    files: ["3MF"],
+    files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/frut"
   },
   {
     id: "anti-ant-stump",
@@ -87,7 +87,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing required for watertightness.",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/anti-ant-stump"
   },
   {
     id: "woodpecker-log",
@@ -100,7 +100,7 @@ const PROJECTS = [
     targetBehavior: ["Foraging", "Ripping and Tearing", "Extractive Foraging"],
     species: ["Emerald tree monitor"],
     complexity: "Intermediate",
-    files: ["3MF", "PDF", "BOM"],
+    files: ["STL", "PDF", "BOM"],
     notes: "",
     downloadUrl: "#"
   }
