@@ -12,7 +12,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["3MF"],
     notes: "",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/cric-o-nut/cric_o_nut.stl"
   },
   {
     id: "pyramid",
