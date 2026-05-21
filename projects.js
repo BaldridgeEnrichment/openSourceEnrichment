@@ -60,8 +60,8 @@ const PROJECTS = [
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers"
   },
   {
-    id: "frut",
-    title: "Frut",
+    id: "fruut",
+    title: "Fruut",
     author: "Dylan Baldridge",
     contributorZoo: "Memphis Zoo",
     description: "A 3D printed hanging food holder that allows care staff to promote food processing by placing leafy greens around high-value food items in the center.",
@@ -72,7 +72,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/frut"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/fruut"
   },
   {
     id: "anti-ant-stump",
@@ -102,6 +102,6 @@ const PROJECTS = [
     complexity: "Intermediate",
     files: ["STL", "PDF", "BOM"],
     notes: "",
-    downloadUrl: "#"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log"
   }
 ];
