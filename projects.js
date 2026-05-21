@@ -12,7 +12,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/cric-o-nut"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/zoo-enrichment-library/raw/main/projects/cric-o-nut"
   },
   {
     id: "pyramid",
@@ -27,7 +27,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/pyramid"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/zoo-enrichment-library/raw/main/projects/pyramid"
   },
   {
     id: "lotus-pod",
@@ -42,7 +42,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/lotus-pod"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/zoo-enrichment-library/raw/main/projects/lotus-pod"
   },
   {
     id: "table-barriers",
@@ -57,7 +57,7 @@ const PROJECTS = [
     complexity: "Complex Kit",
     files: ["STL", "PDF", "DXF", "BOM"],
     notes: "",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/table-barriers"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/zoo-enrichment-library/raw/main/projects/table-barriers"
   },
   {
     id: "frut",
@@ -72,7 +72,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/frut"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/zoo-enrichment-library/raw/main/projects/frut"
   },
   {
     id: "anti-ant-stump",
@@ -87,7 +87,7 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing required for watertightness.",
-    downloadUrl: "https://github.com/YOUR-USERNAME/zoo-enrichment-library/raw/main/projects/anti-ant-stump"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/anti-ant-stump"
   },
   {
     id: "woodpecker-log",
