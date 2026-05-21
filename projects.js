@@ -85,7 +85,7 @@ const PROJECTS = [
     targetBehavior: ["Animal Health"],
     species: ["Azure-winged magpie"],
     complexity: "Simple",
-    files: ["3MF"],
+    files: ["STL"],
     notes: "Epoxy sealing required for watertightness.",
     downloadUrl: "#"
   },
