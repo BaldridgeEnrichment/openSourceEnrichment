@@ -103,5 +103,20 @@ const PROJECTS = [
     files: ["STL", "PDF", "BOM"],
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log"
+  },
+    {
+    id: "antMoundFeeder",
+    title: "Ant Mound Feeder",
+    author: "Dylan Baldridge",
+    contributorZoo: "Memphis Zoo",
+    description: "This feeder has a central pole ants can run up and down for foraging by lizards liek the horntoad. It is themed to look like an ant hill.",
+    tools: ["FDM Printer"],
+    taxa: ["lizards", "Ectotherms"],
+    targetBehavior: ["Foraging", "Hunting"],
+    species: ["Horned lizard"],
+    complexity: "Simple",
+    files: ["STL"],
+    notes: "Print exterior with fuzzy skin for best aesthetic results.",
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/antMoundFeeder"
   }
 ];
