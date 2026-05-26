@@ -60,7 +60,7 @@ const PROJECTS = [
     complexity: "Complex Kit",
     files: ["STL", "PDF", "DXF", "BOM"],
     notes: "",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
     images: [
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TableBarriers.jpeg",
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TBStorage.jpeg"
