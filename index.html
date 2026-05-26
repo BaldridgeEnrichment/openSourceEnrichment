@@ -57,7 +57,7 @@
 
     /* Layout */
    .main-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
-main { background: var(--bg); }
+main { background: var(--bg); position: relative; z-index: 1; }
     @media (max-width: 760px) { .main-layout { grid-template-columns: 1fr; } }
 
     /* Filter Panel */
@@ -84,7 +84,7 @@ main { background: var(--bg); }
     .results-count strong { color: var(--text2); }
 
     /* ── Cards ───────────────────────────────────────────── */
-   .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; position: relative; z-index: 20; }
+   .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
 
     .project-card {
       background: var(--surface);
