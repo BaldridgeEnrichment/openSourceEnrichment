@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── Reset & Base ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -44,290 +43,242 @@
       line-height: 1.6;
     }
 
-    /* ── Layout ───────────────────────────────────────────── */
     .page { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
 
-    /* ── Header ───────────────────────────────────────────── */
-    .site-header {
-      padding: 40px 0 32px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 36px;
-    }
+    /* Header */
+    .site-header { padding: 40px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
     .header-inner { display: flex; align-items: flex-start; gap: 20px; }
-    .header-logo {
-      width: 52px; height: 52px;
-      background: var(--accent);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+    .header-logo { width: 52px; height: 52px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .header-logo svg { width: 28px; height: 28px; fill: #fff; }
-    .header-text h1 {
-      font-family: 'Bitter', serif;
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--text);
-      letter-spacing: -0.3px;
-    }
-    .header-text p {
-      color: var(--text2);
-      font-size: 14px;
-      margin-top: 4px;
-    }
-    .header-badge {
-      margin-top: 10px;
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent-bg);
-      color: var(--accent-dk);
-      font-size: 12px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
+    .header-text h1 { font-family: 'Bitter', serif; font-size: 28px; font-weight: 600; color: var(--text); letter-spacing: -0.3px; }
+    .header-text p { color: var(--text2); font-size: 14px; margin-top: 4px; }
+    .header-badge { margin-top: 10px; display: inline-flex; align-items: center; gap: 6px; background: var(--accent-bg); color: var(--accent-dk); font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 20px; }
     .header-badge svg { width: 12px; height: 12px; fill: currentColor; }
 
-    /* ── Sidebar + Content layout ─────────────────────────── */
+    /* Layout */
     .main-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+    @media (max-width: 760px) { .main-layout { grid-template-columns: 1fr; } }
 
-    @media (max-width: 760px) {
-      .main-layout { grid-template-columns: 1fr; }
-    }
-
-    /* ── Filter Panel ─────────────────────────────────────── */
-    .filter-panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      position: sticky;
-      top: 24px;
-    }
-    .filter-panel-title {
-      font-family: 'Bitter', serif;
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: var(--text);
-    }
+    /* Filter Panel */
+    .filter-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; position: sticky; top: 24px; }
+    .filter-panel-title { font-family: 'Bitter', serif; font-size: 15px; font-weight: 600; margin-bottom: 20px; color: var(--text); }
     .filter-group { margin-bottom: 20px; }
     .filter-group:last-child { margin-bottom: 0; }
-    .filter-group-label {
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--text3);
-      margin-bottom: 8px;
-    }
-    .filter-group-hint {
-      font-size: 11px;
-      color: var(--text3);
-      margin-bottom: 8px;
-      font-style: italic;
-      line-height: 1.4;
-    }
+    .filter-group-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 8px; }
+    .filter-group-hint { font-size: 11px; color: var(--text3); margin-bottom: 8px; font-style: italic; line-height: 1.4; }
     .tag-list { display: flex; flex-wrap: wrap; gap: 5px; }
-
-    /* Tag button styles */
-    .tag-btn {
-      display: inline-flex; align-items: center; gap: 4px;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 400;
-      cursor: pointer;
-      border: 1px solid var(--border);
-      background: var(--surface2);
-      color: var(--text2);
-      transition: all 0.12s ease;
-      user-select: none;
-      line-height: 1.4;
-    }
+    .tag-btn { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 400; cursor: pointer; border: 1px solid var(--border); background: var(--surface2); color: var(--text2); transition: all 0.12s ease; user-select: none; line-height: 1.4; font-family: 'DM Sans', sans-serif; }
     .tag-btn:hover { border-color: var(--border2); color: var(--text); background: #e8e4da; }
-
-    /* Tool tags — blue */
-    .tag-btn.tool-tag.active  { background: var(--tool-bg); border-color: var(--tool-bdr); color: var(--tool-text); font-weight: 500; }
-    /* Taxa tags — green */
+    .tag-btn.tool-tag.active  { background: var(--tool-bg);  border-color: var(--tool-bdr); color: var(--tool-text); font-weight: 500; }
     .tag-btn.taxa-tag.active  { background: var(--accent-bg); border-color: #9fd468; color: var(--accent-dk); font-weight: 500; }
-    /* Behavior tags — amber */
-    .tag-btn.behav-tag.active { background: var(--amber-bg); border-color: #e8b96a; color: var(--amber-txt); font-weight: 500; }
-    /* Complexity tags — coral */
-    .tag-btn.level-tag.active { background: var(--coral-bg); border-color: #e8a98a; color: var(--coral-txt); font-weight: 500; }
-
+    .tag-btn.behav-tag.active { background: var(--amber-bg);  border-color: #e8b96a; color: var(--amber-txt); font-weight: 500; }
+    .tag-btn.level-tag.active { background: var(--coral-bg);  border-color: #e8a98a; color: var(--coral-txt); font-weight: 500; }
     .filter-divider { height: 1px; background: var(--border); margin: 18px 0; }
-
-    .clear-btn {
-      width: 100%;
-      padding: 7px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text3);
-      font-size: 12px;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      transition: all 0.12s;
-      margin-top: 4px;
-    }
+    .clear-btn { width: 100%; padding: 7px; border-radius: var(--radius); border: 1px solid var(--border); background: transparent; color: var(--text3); font-size: 12px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.12s; margin-top: 4px; }
     .clear-btn:hover { background: var(--surface2); color: var(--text2); }
 
-    /* ── Results area ─────────────────────────────────────── */
-    .results-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 16px;
-    }
+    /* Results */
+    .results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
     .results-count { font-size: 13px; color: var(--text3); }
     .results-count strong { color: var(--text2); }
 
-    /* ── Cards ────────────────────────────────────────────── */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
+    /* ── Cards ───────────────────────────────────────────── */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
 
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 18px 20px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      overflow: hidden;
+      cursor: pointer;
       box-shadow: var(--shadow);
       transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
       animation: fadeIn 0.2s ease both;
+      display: flex;
+      flex-direction: column;
     }
-    .project-card:hover {
-      border-color: var(--border2);
-      transform: translateY(-2px);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
-    }
+    .project-card:hover { border-color: var(--border2); transform: translateY(-2px); box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06); }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
-    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
-    .card-complexity {
-      font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
-      padding: 2px 8px; border-radius: 10px; flex-shrink: 0; margin-top: 2px;
-    }
-    .card-complexity.Simple    { background: var(--accent-bg); color: var(--accent-dk); }
-    .card-complexity.Intermediate { background: var(--amber-bg); color: var(--amber-txt); }
-    .card-complexity.Complex   { background: var(--coral-bg); color: var(--coral-txt); }
-
-    .card-title {
-      font-family: 'Bitter', serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.3;
-    }
-    .card-zoo { font-size: 12px; color: var(--text3); margin-top: 2px; }
-
-    .card-description {
-      font-size: 13px;
-      color: var(--text2);
-      line-height: 1.55;
-      flex: 1;
-    }
-
-    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-    .card-tag {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      background: var(--surface2);
-      color: var(--text2);
-      border: 1px solid var(--border);
-    }
-    .card-tag.tool  { background: var(--tool-bg);  color: var(--tool-text); border-color: var(--tool-bdr); }
-    .card-tag.taxa  { background: var(--accent-bg); color: var(--accent-dk); border-color: #b8e095; }
-    .card-tag.behav { background: var(--amber-bg);  color: var(--amber-txt); border-color: #e8b96a; }
-
-    .card-divider { height: 1px; background: var(--border); }
-
-    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-    .file-badges { display: flex; gap: 4px; flex-wrap: wrap; }
-    .file-badge {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px; font-weight: 500;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: var(--surface2);
-      color: var(--text3);
-      border: 1px solid var(--border);
-      letter-spacing: 0.02em;
-    }
-
-    .download-btn {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 6px 14px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: var(--radius);
-      font-size: 12px;
-      font-weight: 500;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.12s, transform 0.1s;
+    /* Card image area */
+    .card-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
       flex-shrink: 0;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .download-btn:hover { background: var(--accent-dk); transform: translateY(-1px); }
-    .download-btn svg { width: 12px; height: 12px; fill: currentColor; flex-shrink: 0; }
-
-    /* Notes tooltip */
-    .card-notes {
-      font-size: 12px;
-      color: var(--text3);
-      font-style: italic;
-      padding: 6px 10px;
-      background: var(--surface2);
-      border-radius: 6px;
-      border-left: 3px solid var(--border2);
     }
 
-    /* Species list */
-    .species-list { font-size: 12px; color: var(--text3); }
-    .species-list span { margin-right: 4px; }
-
-    /* Safety concerns */
-    .safety-pill {
-      font-size: 11px; padding: 2px 8px; border-radius: 10px;
-      background: #fff3cd; color: #856404; border: 1px solid #ffc107;
+    /* Placeholder — green with faint geometric texture */
+    .card-placeholder {
+      width: 100%; height: 100%;
+      background-color: #b8ceaa;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='20' cy='20' r='10' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Ccircle cx='60' cy='60' r='10' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Crect x='48' y='8' width='16' height='16' rx='3' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Crect x='8' y='48' width='16' height='16' rx='3' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Cline x1='0' y1='40' x2='80' y2='40' stroke='%2395b07c' stroke-width='0.75' stroke-dasharray='2 6'/%3E%3Cline x1='40' y1='0' x2='40' y2='80' stroke='%2395b07c' stroke-width='0.75' stroke-dasharray='2 6'/%3E%3C/svg%3E");
+      display: flex; align-items: center; justify-content: center;
     }
+    .card-placeholder svg { width: 38px; height: 38px; opacity: 0.4; fill: none; stroke: #5a7a42; stroke-width: 2; }
+
+    /* Carousel arrows — appear on hover */
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 30px; height: 30px;
+      background: rgba(255,255,255,0.88);
+      border: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 2;
+      opacity: 0; transition: opacity 0.15s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .carousel-btn svg { width: 16px; height: 16px; fill: var(--text); }
+    .carousel-btn.prev { left: 8px; }
+    .carousel-btn.next { right: 8px; }
+    .card-image-wrap:hover .carousel-btn { opacity: 1; }
+    .carousel-btn:hover { background: #fff; }
+
+    /* Carousel image slides */
+    .carousel-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
+
+    /* Card body — just title, zoo, tags */
+    .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+    .card-title { font-family: 'Bitter', serif; font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .card-zoo { font-size: 12px; color: var(--text3); margin-top: 1px; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
+    .card-tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
+    .card-tag.tool { background: var(--tool-bg);  color: var(--tool-text); border-color: var(--tool-bdr); }
+    .card-tag.taxa { background: var(--accent-bg); color: var(--accent-dk); border-color: #b8e095; }
 
     /* Empty state */
-    .empty-state {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text3);
-    }
+    .empty-state { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text3); }
     .empty-state svg { width: 48px; height: 48px; fill: var(--border2); margin-bottom: 16px; display: block; margin-inline: auto; }
     .empty-state p { font-size: 14px; margin-top: 8px; }
 
-    /* ── Footer ───────────────────────────────────────────── */
-    .site-footer {
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--text3);
-      text-align: center;
-    }
+    /* Footer */
+    .site-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text3); text-align: center; }
     .site-footer a { color: var(--text3); }
+
+    /* ── OVERLAY ─────────────────────────────────────────── */
+    .overlay-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(20,18,14,0.6);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .overlay-backdrop.open { opacity: 1; pointer-events: all; }
+
+    .overlay {
+      background: var(--surface);
+      border-radius: 18px;
+      width: 100%; max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      opacity: 0;
+    }
+    .overlay-backdrop.open .overlay { transform: none; opacity: 1; }
+
+    /* Overlay image */
+    .overlay-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 18px 18px 0 0;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .overlay-placeholder {
+      width: 100%; height: 100%;
+      background-color: #b8ceaa;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='20' cy='20' r='10' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Ccircle cx='60' cy='60' r='10' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Crect x='48' y='8' width='16' height='16' rx='3' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Crect x='8' y='48' width='16' height='16' rx='3' fill='none' stroke='%2395b07c' stroke-width='1.5' stroke-dasharray='4 3'/%3E%3Cline x1='0' y1='40' x2='80' y2='40' stroke='%2395b07c' stroke-width='0.75' stroke-dasharray='2 6'/%3E%3Cline x1='40' y1='0' x2='40' y2='80' stroke='%2395b07c' stroke-width='0.75' stroke-dasharray='2 6'/%3E%3C/svg%3E");
+      display: flex; align-items: center; justify-content: center;
+    }
+    .overlay-placeholder svg { width: 56px; height: 56px; opacity: 0.35; fill: none; stroke: #5a7a42; stroke-width: 2; }
+
+    .overlay-carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.9);
+      border: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 2;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+      transition: background 0.12s;
+    }
+    .overlay-carousel-btn svg { width: 20px; height: 20px; fill: var(--text); }
+    .overlay-carousel-btn.prev { left: 12px; }
+    .overlay-carousel-btn.next { right: 12px; }
+    .overlay-carousel-btn:hover { background: #fff; }
+
+    .overlay-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+    .overlay-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.45); cursor: pointer; transition: background 0.15s; }
+    .overlay-dot.active { background: rgba(255,255,255,0.95); }
+
+    /* Close button */
+    .overlay-close {
+      position: absolute; top: 12px; right: 12px; z-index: 3;
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,0.9);
+      border: none; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    .overlay-close svg { width: 16px; height: 16px; fill: var(--text); }
+    .overlay-close:hover { background: #fff; }
+
+    /* Overlay body */
+    .overlay-body { padding: 24px 28px 28px; }
+    .overlay-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+    .overlay-title { font-family: 'Bitter', serif; font-size: 22px; font-weight: 600; color: var(--text); line-height: 1.2; }
+    .overlay-zoo { font-size: 13px; color: var(--text3); margin-top: 4px; }
+    .overlay-complexity { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 10px; flex-shrink: 0; margin-top: 4px; }
+    .overlay-complexity.Simple       { background: var(--accent-bg); color: var(--accent-dk); }
+    .overlay-complexity.Intermediate { background: var(--amber-bg);  color: var(--amber-txt); }
+    .overlay-complexity.Complex      { background: var(--coral-bg);  color: var(--coral-txt); }
+
+    .overlay-description { font-size: 14px; color: var(--text2); line-height: 1.65; margin-bottom: 18px; }
+
+    .overlay-section { margin-bottom: 14px; }
+    .overlay-section-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); margin-bottom: 7px; }
+    .overlay-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .overlay-tag { font-size: 12px; padding: 3px 10px; border-radius: 10px; background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
+    .overlay-tag.tool  { background: var(--tool-bg);  color: var(--tool-text); border-color: var(--tool-bdr); }
+    .overlay-tag.taxa  { background: var(--accent-bg); color: var(--accent-dk); border-color: #b8e095; }
+    .overlay-tag.behav { background: var(--amber-bg);  color: var(--amber-txt); border-color: #e8b96a; }
+
+    .overlay-species { font-size: 13px; color: var(--text2); line-height: 1.7; }
+    .overlay-notes { font-size: 13px; color: var(--text3); font-style: italic; padding: 10px 14px; background: var(--surface2); border-radius: 8px; border-left: 3px solid var(--border2); margin-top: 4px; }
+    .overlay-divider { height: 1px; background: var(--border); margin: 18px 0; }
+
+    .overlay-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .file-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+    .file-badge { font-size: 11px; font-weight: 500; padding: 3px 7px; border-radius: 5px; background: var(--surface2); color: var(--text3); border: 1px solid var(--border); font-family: monospace; letter-spacing: 0.02em; }
+
+    .view-files-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 18px;
+      background: var(--accent); color: #fff;
+      border-radius: var(--radius);
+      font-size: 13px; font-weight: 500;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background 0.12s, transform 0.1s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .view-files-btn:hover { background: var(--accent-dk); transform: translateY(-1px); }
+    .view-files-btn svg { width: 14px; height: 14px; fill: currentColor; }
+    .view-files-btn.disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
   </style>
 </head>
 <body>
 
 <div class="page">
-
-  <!-- ── Header ─────────────────────────────────────────── -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-logo" aria-hidden="true">
-        <!-- Paw icon -->
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 13.5c-2.33 0-7 1.17-7 3.5v1.5h14V17c0-2.33-4.67-3.5-7-3.5zM5.5 9c.83 0 1.5-.67 1.5-1.5S6.33 6 5.5 6 4 6.67 4 7.5 4.67 9 5.5 9zm13 0c.83 0 1.5-.67 1.5-1.5S19.33 6 18.5 6 17 6.67 17 7.5 17.67 9 18.5 9zm-6.5 1c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM12 12c-2.21 0-4 1.79-4 4h8c0-2.21-1.79-4-4-4z"/>
         </svg>
@@ -344,96 +295,71 @@
   </header>
 
   <div class="main-layout">
-
-    <!-- ── Filter Sidebar ───────────────────────────────── -->
     <aside class="filter-panel" aria-label="Filter projects">
       <div class="filter-panel-title">Filter Projects</div>
-
-      <!-- Tools — inclusive AND logic -->
       <div class="filter-group">
         <div class="filter-group-label">Tools I have access to</div>
         <div class="filter-group-hint">Select the tools available to you — results will only show projects you can actually make.</div>
         <div class="tag-list" id="tool-tags"></div>
       </div>
-
       <div class="filter-divider"></div>
-
-      <!-- Taxa — OR logic -->
       <div class="filter-group">
         <div class="filter-group-label">Animal group</div>
         <div class="filter-group-hint">Show projects for any of the selected groups.</div>
         <div class="tag-list" id="taxa-tags"></div>
       </div>
-
       <div class="filter-divider"></div>
-
-      <!-- Behavior — OR logic -->
       <div class="filter-group">
         <div class="filter-group-label">Target behavior</div>
         <div class="filter-group-hint">Show projects targeting any of these behaviors.</div>
         <div class="tag-list" id="behav-tags"></div>
       </div>
-
       <div class="filter-divider"></div>
-
-      <!-- Complexity — OR logic -->
       <div class="filter-group">
         <div class="filter-group-label">Complexity</div>
         <div class="tag-list" id="level-tags"></div>
       </div>
-
       <div class="filter-divider"></div>
-
       <button class="clear-btn" id="clear-btn" onclick="clearFilters()">Clear all filters</button>
     </aside>
 
-    <!-- ── Main content ──────────────────────────────────── -->
     <main>
       <div class="results-header">
         <div class="results-count" id="results-count"></div>
       </div>
       <div class="card-grid" id="card-grid"></div>
     </main>
-
-  </div><!-- end main-layout -->
+  </div>
 
   <footer class="site-footer">
-    <p>openSourceEnrichment · Open source under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> · <a href="https://github.com/" target="_blank">Contribute on GitHub</a></p>
+    <p>openSourceEnrichment · Open source under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> · <a href="https://github.com/BaldridgeEnrichment/openSourceEnrichment" target="_blank">Contribute on GitHub</a></p>
   </footer>
+</div>
 
-</div><!-- end page -->
+<!-- Overlay -->
+<div class="overlay-backdrop" id="overlay-backdrop">
+  <div class="overlay" id="overlay">
+    <div class="overlay-image-wrap" id="overlay-image-wrap"></div>
+    <div class="overlay-body" id="overlay-body"></div>
+  </div>
+</div>
 
-<!-- Load project data -->
 <script src="projects.js"></script>
-
 <script>
-// ============================================================
-//  FILTER ENGINE
-//  ─ Tools uses INCLUSIVE AND logic:
-//    if tools are selected, only show projects whose required
-//    tools are ALL contained within the user's selected set.
-//    (i.e. "I have these tools" — hide anything I can't make)
-//  ─ Taxa, Behavior, Complexity use OR logic:
-//    show projects matching ANY of the selected values.
-// ============================================================
-
+// ── Filter state ──────────────────────────────────────────
 const activeFilters = {
-  tools:  new Set(),  // inclusive AND
-  taxa:   new Set(),  // OR
-  behav:  new Set(),  // OR
-  level:  new Set()   // OR
+  tools: new Set(),
+  taxa:  new Set(),
+  behav: new Set(),
+  level: new Set()
 };
 
-// ── Build tag sets from project data ──────────────────────
-function uniqueSorted(arr) {
-  return [...new Set(arr.flat())].filter(Boolean).sort();
-}
+function uniqueSorted(arr) { return [...new Set(arr.flat())].filter(Boolean).sort(); }
 const allTools  = uniqueSorted(PROJECTS.map(p => p.tools));
 const allTaxa   = uniqueSorted(PROJECTS.map(p => p.taxa));
 const allBehav  = uniqueSorted(PROJECTS.map(p => p.targetBehavior));
 const allLevels = ["Simple", "Intermediate", "Complex Kit"];
 
-// ── Render filter buttons ─────────────────────────────────
 function renderTags(containerId, values, filterKey, cssClass) {
   const el = document.getElementById(containerId);
   el.innerHTML = '';
@@ -471,33 +397,12 @@ function clearFilters() {
   renderCards();
 }
 
-// ── Filter logic ──────────────────────────────────────────
 function projectMatches(p) {
-  // TOOLS — inclusive AND: user's selected tools must cover all project tools
-  if (activeFilters.tools.size > 0) {
-    const hasAll = p.tools.every(t => activeFilters.tools.has(t));
-    if (!hasAll) return false;
-  }
-  // TAXA — OR
-  if (activeFilters.taxa.size > 0) {
-    const match = p.taxa.some(t => activeFilters.taxa.has(t));
-    if (!match) return false;
-  }
-  // BEHAVIOR — OR
-  if (activeFilters.behav.size > 0) {
-    const match = p.targetBehavior.some(b => activeFilters.behav.has(b));
-    if (!match) return false;
-  }
-  // COMPLEXITY — OR
-  if (activeFilters.level.size > 0) {
-    if (!activeFilters.level.has(p.complexity)) return false;
-  }
+  if (activeFilters.tools.size > 0 && !p.tools.every(t => activeFilters.tools.has(t))) return false;
+  if (activeFilters.taxa.size  > 0 && !p.taxa.some(t  => activeFilters.taxa.has(t)))  return false;
+  if (activeFilters.behav.size > 0 && !p.targetBehavior.some(b => activeFilters.behav.has(b))) return false;
+  if (activeFilters.level.size > 0 && !activeFilters.level.has(p.complexity)) return false;
   return true;
-}
-
-// ── Render cards ──────────────────────────────────────────
-function fileBadgeHTML(files) {
-  return files.map(f => `<span class="file-badge">${f}</span>`).join('');
 }
 
 function complexityClass(c) {
@@ -506,20 +411,59 @@ function complexityClass(c) {
   return 'Complex';
 }
 
-function renderCards() {
-  const grid = document.getElementById('card-grid');
-  const countEl = document.getElementById('results-count');
-  const visible = PROJECTS.filter(projectMatches);
+// ── Placeholder SVG (image icon) ─────────────────────────
+const placeholderInner = `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="6" y="14" width="52" height="38" rx="4"/>
+  <circle cx="22" cy="28" r="6"/>
+  <polyline points="6,42 20,30 32,40 44,26 58,38"/>
+</svg>`;
 
+// ── Card carousel state ───────────────────────────────────
+const cardState = {}; // { [id]: currentIndex }
+
+function buildCardImage(p) {
+  const imgs = p.images && p.images.length ? p.images : [];
+  if (imgs.length === 0) {
+    return `<div class="card-placeholder">${placeholderInner}</div>`;
+  }
+  const slides = imgs.map((src, i) =>
+    `<img class="carousel-slide" src="${src}" alt="${p.title} image ${i+1}" style="opacity:${i===0?1:0};">`
+  ).join('');
+  const arrows = imgs.length > 1 ? `
+    <button class="carousel-btn prev" onclick="cardSlide(event,'${p.id}',-1)" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+    </button>
+    <button class="carousel-btn next" onclick="cardSlide(event,'${p.id}',1)" aria-label="Next">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+    </button>` : '';
+  return slides + arrows;
+}
+
+function cardSlide(e, id, dir) {
+  e.stopPropagation(); // don't open overlay when clicking arrows
+  const p = PROJECTS.find(x => x.id === id);
+  if (!p || !p.images || p.images.length < 2) return;
+  if (!cardState[id]) cardState[id] = 0;
+  const total = p.images.length;
+  const next = (cardState[id] + dir + total) % total;
+  cardState[id] = next;
+  const wrap = document.querySelector(`[data-id="${id}"] .card-image-wrap`);
+  if (wrap) wrap.querySelectorAll('.carousel-slide').forEach((img, i) => img.style.opacity = i === next ? 1 : 0);
+}
+
+// ── Render cards ──────────────────────────────────────────
+function renderCards() {
+  const grid     = document.getElementById('card-grid');
+  const countEl  = document.getElementById('results-count');
+  const visible  = PROJECTS.filter(projectMatches);
   grid.innerHTML = '';
 
   if (visible.length === 0) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <svg viewBox="0 0 24 24"><path d="M11 15h2v2h-2v-2zm0-8h2v6h-2V7zm1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8z"/></svg>
-        <strong>No projects match your current filters.</strong>
-        <p>Try removing a filter or <button onclick="clearFilters()" style="background:none;border:none;color:var(--accent);cursor:pointer;font-size:14px;padding:0;text-decoration:underline;">clearing all</button> to browse everything.</p>
-      </div>`;
+    grid.innerHTML = `<div class="empty-state">
+      <svg viewBox="0 0 24 24"><path d="M11 15h2v2h-2v-2zm0-8h2v6h-2V7zm1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8z"/></svg>
+      <strong>No projects match your current filters.</strong>
+      <p>Try removing a filter or <button onclick="clearFilters()" style="background:none;border:none;color:var(--accent);cursor:pointer;font-size:14px;padding:0;text-decoration:underline;">clearing all</button> to browse everything.</p>
+    </div>`;
     countEl.innerHTML = `<strong>0</strong> projects`;
     return;
   }
@@ -529,42 +473,151 @@ function renderCards() {
   visible.forEach((p, i) => {
     const card = document.createElement('div');
     card.className = 'project-card';
+    card.dataset.id = p.id;
     card.style.animationDelay = `${i * 40}ms`;
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `Open ${p.title} details`);
+    card.onclick = () => openOverlay(p.id);
+    card.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') openOverlay(p.id); };
 
-    const toolTags  = p.tools.map(t => `<span class="card-tag tool">${t}</span>`).join('');
-    const taxaTags  = p.taxa.map(t => `<span class="card-tag taxa">${t}</span>`).join('');
-    const behavTags = p.targetBehavior.map(b => `<span class="card-tag behav">${b}</span>`).join('');
-    const speciesTxt = p.species.length ? `<div class="species-list">🐾 ${p.species.map(s=>`<span>${s}</span>`).join(' · ')}</div>` : '';
-    const notesHTML = p.notes ? `<div class="card-notes">💡 ${p.notes}</div>` : '';
-    const downloadDisabled = p.downloadUrl === '#';
+    const toolTags = p.tools.map(t => `<span class="card-tag tool">${t}</span>`).join('');
+    const taxaTags = p.taxa.map(t  => `<span class="card-tag taxa">${t}</span>`).join('');
 
     card.innerHTML = `
-      <div class="card-header">
+      <div class="card-image-wrap">${buildCardImage(p)}</div>
+      <div class="card-body">
         <div>
           <div class="card-title">${p.title}</div>
           <div class="card-zoo">${p.contributorZoo}</div>
         </div>
-        <span class="card-complexity ${complexityClass(p.complexity)}">${p.complexity}</span>
-      </div>
-      <div class="card-description">${p.description}</div>
-      ${speciesTxt}
-      <div class="card-tags">${toolTags}${taxaTags}${behavTags}</div>
-      ${notesHTML}
-      <div class="card-divider"></div>
-      <div class="card-footer">
-        <div class="file-badges">${fileBadgeHTML(p.files)}</div>
-        <a class="download-btn"
-           href="${p.downloadUrl}"
-           ${downloadDisabled ? 'onclick="return false;" title="Files coming soon"' : 'target="_blank"'}
-           style="${downloadDisabled ? 'opacity:0.5;cursor:not-allowed;' : ''}">
-          <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18v12.17l-3.59-3.58L7 12l5 5 5-5-1.41-1.41L13 14.17V2h-1z"/></svg>
-          ${downloadDisabled ? 'Files soon' : 'View Files'}
-        </a>
+        <div class="card-tags">${toolTags}${taxaTags}</div>
       </div>`;
 
     grid.appendChild(card);
   });
 }
+
+// ── Overlay ───────────────────────────────────────────────
+let overlayProject = null;
+let overlayIdx     = 0;
+
+function openOverlay(id) {
+  overlayProject = PROJECTS.find(x => x.id === id);
+  if (!overlayProject) return;
+  overlayIdx = 0;
+  renderOverlayImage();
+  renderOverlayBody();
+  document.getElementById('overlay-backdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOverlay() {
+  document.getElementById('overlay-backdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close when clicking the dark backdrop (but not the overlay itself)
+document.getElementById('overlay-backdrop').addEventListener('click', function(e) {
+  if (e.target === this) closeOverlay();
+});
+
+function renderOverlayImage() {
+  const p    = overlayProject;
+  const imgs = p.images && p.images.length ? p.images : [];
+  const wrap = document.getElementById('overlay-image-wrap');
+
+  const closeBtn = `<button class="overlay-close" onclick="closeOverlay()" aria-label="Close">
+    <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>`;
+
+  if (imgs.length === 0) {
+    wrap.innerHTML = closeBtn + `<div class="overlay-placeholder">${placeholderInner}</div>`;
+    return;
+  }
+
+  const slides = imgs.map((src, i) =>
+    `<img class="carousel-slide" src="${src}" alt="${p.title} image ${i+1}" style="opacity:${i===0?1:0};">`
+  ).join('');
+
+  const arrows = imgs.length > 1 ? `
+    <button class="overlay-carousel-btn prev" onclick="overlaySlide(-1)" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+    </button>
+    <button class="overlay-carousel-btn next" onclick="overlaySlide(1)" aria-label="Next">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+    </button>` : '';
+
+  const dots = imgs.length > 1
+    ? `<div class="overlay-dots">${imgs.map((_,i) => `<div class="overlay-dot${i===0?' active':''}" onclick="overlayGoTo(${i})"></div>`).join('')}</div>`
+    : '';
+
+  wrap.innerHTML = closeBtn + slides + arrows + dots;
+}
+
+function overlaySlide(dir) {
+  const imgs = overlayProject.images;
+  if (!imgs || imgs.length < 2) return;
+  overlayGoTo((overlayIdx + dir + imgs.length) % imgs.length);
+}
+
+function overlayGoTo(idx) {
+  overlayIdx = idx;
+  const wrap = document.getElementById('overlay-image-wrap');
+  wrap.querySelectorAll('.carousel-slide').forEach((img, i) => img.style.opacity = i === idx ? 1 : 0);
+  wrap.querySelectorAll('.overlay-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+function renderOverlayBody() {
+  const p = overlayProject;
+  const noUrl = !p.downloadUrl || p.downloadUrl === '#';
+
+  const speciesHTML = p.species && p.species.length
+    ? `<div class="overlay-section">
+        <div class="overlay-section-label">Species</div>
+        <div class="overlay-species">${p.species.join(' · ')}</div>
+       </div>` : '';
+
+  const notesHTML = p.notes
+    ? `<div class="overlay-notes">💡 ${p.notes}</div>` : '';
+
+  document.getElementById('overlay-body').innerHTML = `
+    <div class="overlay-header">
+      <div>
+        <div class="overlay-title">${p.title}</div>
+        <div class="overlay-zoo">${p.contributorZoo} · ${p.author}</div>
+      </div>
+      <span class="overlay-complexity ${complexityClass(p.complexity)}">${p.complexity}</span>
+    </div>
+    <div class="overlay-description">${p.description}</div>
+    <div class="overlay-section">
+      <div class="overlay-section-label">Tools required</div>
+      <div class="overlay-tags">${p.tools.map(t => `<span class="overlay-tag tool">${t}</span>`).join('')}</div>
+    </div>
+    <div class="overlay-section">
+      <div class="overlay-section-label">Animal groups</div>
+      <div class="overlay-tags">${p.taxa.map(t => `<span class="overlay-tag taxa">${t}</span>`).join('')}</div>
+    </div>
+    <div class="overlay-section">
+      <div class="overlay-section-label">Target behaviors</div>
+      <div class="overlay-tags">${p.targetBehavior.map(b => `<span class="overlay-tag behav">${b}</span>`).join('')}</div>
+    </div>
+    ${speciesHTML}
+    ${notesHTML}
+    <div class="overlay-divider"></div>
+    <div class="overlay-footer">
+      <div class="file-badges">${p.files.map(f => `<span class="file-badge">${f}</span>`).join('')}</div>
+      <a class="view-files-btn ${noUrl ? 'disabled' : ''}"
+         href="${p.downloadUrl || '#'}"
+         ${noUrl ? '' : 'target="_blank"'}>
+        <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+        ${noUrl ? 'Files coming soon' : 'View files'}
+      </a>
+    </div>`;
+}
+
+// Close on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
 
 // ── Init ──────────────────────────────────────────────────
 renderTags('tool-tags',  allTools,  'tools',  'tool-tag');
