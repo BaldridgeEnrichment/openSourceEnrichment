@@ -56,11 +56,12 @@
     .header-badge svg { width: 12px; height: 12px; fill: currentColor; }
 
     /* Layout */
-    .main-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+   .main-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+main { background: var(--bg); }
     @media (max-width: 760px) { .main-layout { grid-template-columns: 1fr; } }
 
     /* Filter Panel */
-    .filter-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; position: sticky; top: 24px; z-index: 10; }
+    .filter-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; position: sticky; top: 24px; }
     .filter-panel-title { font-family: 'Bitter', serif; font-size: 15px; font-weight: 600; margin-bottom: 20px; color: var(--text); }
     .filter-group { margin-bottom: 20px; }
     .filter-group:last-child { margin-bottom: 0; }
@@ -83,7 +84,7 @@
     .results-count strong { color: var(--text2); }
 
     /* ── Cards ───────────────────────────────────────────── */
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+   .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; position: relative; z-index: 20; }
 
     .project-card {
       background: var(--surface);
