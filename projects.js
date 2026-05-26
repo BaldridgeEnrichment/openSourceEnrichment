@@ -12,7 +12,11 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/cric-o-nut"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/cric-o-nut",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cric-o-nut/CONClosed.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cric-o-nut/CONOpen.jpeg"
+    ]
   },
   {
     id: "pyramid",
@@ -60,11 +64,7 @@ const PROJECTS = [
     complexity: "Complex Kit",
     files: ["STL", "PDF", "DXF", "BOM"],
     notes: "",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
-    images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TableBarriers.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TBStorage.jpeg"
-    ]
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers"
   },
   {
     id: "fruut",
@@ -79,7 +79,10 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/fruut"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/fruut",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/fruut/Fruut.jpeg"
+    ]
   },
   {
     id: "anti-ant-stump",
@@ -94,7 +97,12 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing required for watertightness.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/anti-ant-stump"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/anti-ant-stump",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/Stump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/DoubleStump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/UnfinishedStump.jpeg"
+    ]
   },
   {
     id: "woodpecker-log",
@@ -124,6 +132,10 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Print exterior with fuzzy skin for best aesthetic results.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/antMoundFeeder"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/antMoundFeeder",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/AMFClosed.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/AMFOpen.jpeg"
+    ]
   }
 ];
