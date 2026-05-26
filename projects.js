@@ -27,7 +27,10 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/pyramid"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/pyramid",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pyramid/pyramid.jpeg"
+    ]
   },
   {
     id: "lotus-pod",
