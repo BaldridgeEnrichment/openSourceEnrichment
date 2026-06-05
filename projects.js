@@ -137,7 +137,7 @@ const PROJECTS = [
     title: "Ant Mound Feeder",
     author: "Dylan Baldridge",
     contributorZoo: "Memphis Zoo",
-    description: "This feeder has a central pole ants can run up and down for foraging by lizards liek the horntoad. It is themed to look like an ant hill.",
+    description: "This feeder has a central pole ants can run up and down for foraging by lizards like the horntoad. It is themed to look like an ant hill.",
     tools: ["FDM Printer"],
     taxa: ["lizards", "Ectotherms"],
     targetBehavior: ["Foraging", "Hunting"],
@@ -149,6 +149,25 @@ const PROJECTS = [
     images: [
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/pics/AMFClosed.jpeg",
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/pics/AMFOpen.jpeg"
+    ]
+  },
+    {
+    id: "CricketMoundFeeder",
+    title: "Cricket Mound Feeder",
+    author: "Dylan Baldridge",
+    contributorZoo: "Memphis Zoo",
+    description: "This is a slow feeder for crickets. It is themed to look like an ant hill or rock depending on the paint job.",
+    tools: ["FDM Printer"],
+    taxa: ["lizards", "Ectotherms"],
+    targetBehavior: ["Foraging", "Hunting"],
+    species: ["Unspecified"],
+    complexity: "Simple",
+    files: ["STL"],
+    notes: "Print exterior with fuzzy skin for best aesthetic results.",
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/CricketMoundFeeder",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/CricketMoundFeeder/pics/CMFClosed.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/CricketMoundFeeder/pics/CMFOpen.jpeg"
     ]
   }
 ];
