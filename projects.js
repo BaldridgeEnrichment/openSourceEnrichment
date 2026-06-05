@@ -164,10 +164,10 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Print exterior with fuzzy skin for best aesthetic results.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/CricketMoundFeeder",
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/cricketMoundFeeder",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/CricketMoundFeeder/pics/CMFClosed.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/CricketMoundFeeder/pics/CMFOpen.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cricketMoundFeeder/pics/CMFClosed.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cricketMoundFeeder/pics/CMFOpen.jpeg"
     ]
   }
 ];
