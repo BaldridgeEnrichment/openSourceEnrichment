@@ -107,9 +107,9 @@ const PROJECTS = [
     notes: "Epoxy sealing required for watertightness.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/anti-ant-stump",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/anti-ant-stump/Stump.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/anti-ant-stump/DoubleStump.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/anti-ant-stump/UnfinishedStump.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/Stump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/DoubleStump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/UnfinishedStump.jpeg"
     ]
   },
   {
@@ -127,9 +127,9 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/woodpecker-log/WPLPaper.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/woodpecker-log/WPLPaperTorn.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/woodpecker-log/WPLParts.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/pics/WPLPaper.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/pics/WPLPaperTorn.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/pics/WPLParts.jpeg"
     ]
   },
     {
