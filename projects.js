@@ -188,5 +188,5 @@ const PROJECTS = [
       "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Render.jpeg",
       "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Built.jpeg"
     ]
-  }
+  },
 ];
