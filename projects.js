@@ -49,7 +49,11 @@ const PROJECTS = [
     complexity: "Simple",
     files: ["STL"],
     notes: "Epoxy sealing recommended for sanitation.",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/lotus-pod"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/lotus-pod",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/lotus-pod/LotusPodRenderBack.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/lotus-pod/LotusPodRenderFront.jpeg"
+    ]
   },
   {
     id: "table-barriers",
@@ -64,7 +68,11 @@ const PROJECTS = [
     complexity: "Complex Kit",
     files: ["STL", "PDF", "DXF", "BOM"],
     notes: "",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TabBarrierAssembled.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TabBarrierStored.jpeg"
+    ]
   },
   {
     id: "fruut",
@@ -117,7 +125,12 @@ const PROJECTS = [
     complexity: "Intermediate",
     files: ["STL", "PDF", "BOM"],
     notes: "",
-    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log"
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/WPLPaper.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/WPLPaperTorn.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/WPLParts.jpeg"
+    ]
   },
     {
     id: "antMoundFeeder",
