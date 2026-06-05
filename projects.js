@@ -14,8 +14,8 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/cric-o-nut",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cric-o-nut/CONClosed.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cric-o-nut/CONOpen.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cric-o-nut/pics/CONClosed.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cric-o-nut/pics/CONOpen.jpeg"
     ]
   },
   {
@@ -33,7 +33,7 @@ const PROJECTS = [
     notes: "Epoxy sealing recommended for sanitation.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/pyramid",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pyramid/pyramid.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pyramid/pics/pyramid.jpeg"
     ]
   },
   {
@@ -51,8 +51,8 @@ const PROJECTS = [
     notes: "Epoxy sealing recommended for sanitation.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/lotus-pod",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/lotus-pod/LotusPodRenderBack.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/lotus-pod/LotusPodRenderFront.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/lotus-pod/pics/LotusPodRenderBack.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/lotus-pod/pics/LotusPodRenderFront.jpeg"
     ]
   },
   {
@@ -70,8 +70,8 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TabBarrierAssembled.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/TabBarrierStored.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/pics/TabBarrierAssembled.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/pics/TabBarrierStored.jpeg"
     ]
   },
   {
@@ -89,7 +89,7 @@ const PROJECTS = [
     notes: "Epoxy sealing recommended for sanitation.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/fruut",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/fruut/Fruut.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/fruut/pics/Fruut.jpeg"
     ]
   },
   {
@@ -107,9 +107,9 @@ const PROJECTS = [
     notes: "Epoxy sealing required for watertightness.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/anti-ant-stump",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/Stump.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/DoubleStump.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/UnfinishedStump.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/anti-ant-stump/Stump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/anti-ant-stump/DoubleStump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/anti-ant-stump/UnfinishedStump.jpeg"
     ]
   },
   {
@@ -127,9 +127,9 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/WPLPaper.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/WPLPaperTorn.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/woodpecker-log/WPLParts.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/woodpecker-log/WPLPaper.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/woodpecker-log/WPLPaperTorn.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pics/woodpecker-log/WPLParts.jpeg"
     ]
   },
     {
@@ -147,8 +147,8 @@ const PROJECTS = [
     notes: "Print exterior with fuzzy skin for best aesthetic results.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/antMoundFeeder",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/AMFClosed.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/AMFOpen.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/pics/AMFClosed.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/antMoundFeeder/pics/AMFOpen.jpeg"
     ]
   }
 ];
