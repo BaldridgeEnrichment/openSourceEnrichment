@@ -70,8 +70,8 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/pics/TabBarrierAssembled.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/pics/TabBarrierStored.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/pics/TableBarriers.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/table-barriers/pics/TBStorage.jpeg"
     ]
   },
   {
