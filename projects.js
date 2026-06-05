@@ -66,7 +66,7 @@ const PROJECTS = [
     targetBehavior: ["Presentation", "Exploration", "Animal Health"],
     species: ["Indian star tortoise", "Pancake tortoise", "Legless lizard", "Blue-tongue skink", "Hedgehog tenrec"],
     complexity: "Complex Kit",
-    files: ["STL", "PDF", "DXF", "BOM"],
+    files: ["STL","DXF"],
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
     images: [
@@ -123,7 +123,7 @@ const PROJECTS = [
     targetBehavior: ["Foraging", "Ripping and Tearing", "Extractive Foraging"],
     species: ["Emerald tree monitor"],
     complexity: "Intermediate",
-    files: ["STL", "PDF", "BOM"],
+    files: ["STL"],
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/woodpecker-log",
     images: [
