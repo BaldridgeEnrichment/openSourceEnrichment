@@ -66,7 +66,7 @@ const PROJECTS = [
     targetBehavior: ["Presentation", "Exploration", "Animal Health"],
     species: ["Indian star tortoise", "Pancake tortoise", "Legless lizard", "Blue-tongue skink", "Hedgehog tenrec"],
     complexity: "Complex Kit",
-    files: ["STL","DXF"],
+    files: ["STL","DXF", "PDF"],
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/table-barriers",
     images: [
