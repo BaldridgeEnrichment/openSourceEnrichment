@@ -169,5 +169,24 @@ const PROJECTS = [
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cricketMoundFeeder/pics/CMFClosed.jpeg",
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/cricketMoundFeeder/pics/CMFOpen.jpeg"
     ]
-  }
+  },
+    {
+    id: "diagonalScreenNestBox",
+    title: "Diag",
+    author: "Dylan Baldridge",
+    contributorZoo: "Memphis Zoo",
+    description: "A 3D printed slow feeder that can be hung from perching. Contains nubs to encourage licking and arboreal foraging behavior.",
+    tools: ["FDM Printer"],
+    taxa: ["Small Primates", "Birds"],
+    targetBehavior: ["Foraging", "Climbing"],
+    species: ["Ruffed lemur", "Guenon"],
+    complexity: "Simple",
+    files: ["STL"],
+    notes: "Epoxy sealing recommended for sanitation.",
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox",
+    images: [
+      "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Render.jpeg",
+      "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Built.jpeg"
+    ]
+  },
 ];
