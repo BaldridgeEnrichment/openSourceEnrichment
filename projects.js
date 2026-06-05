@@ -33,7 +33,7 @@ const PROJECTS = [
     notes: "Epoxy sealing recommended for sanitation.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/pyramid",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pyramid/pics/pyramid.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/pyramid/pics/Pyramid.jpeg"
     ]
   },
   {
