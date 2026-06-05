@@ -185,8 +185,8 @@ const PROJECTS = [
     notes: "Can be mounted to night house walls.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Render.jpeg",
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Built.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/diagonalScreenNestBox/pics/Render.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/diagonalScreenNestBox/pics/Built.jpeg"
     ]
   },
 ];
