@@ -175,18 +175,18 @@ const PROJECTS = [
     title: "Diagonal Screen Nest Box",
     author: "Dylan Baldridge",
     contributorZoo: "Memphis Zoo",
-    description: "A wall mounted nest box with a removable floor for easy cleaning. The interior voume is 14"x14"18".",
+    description: "A wall mounted nest box with a removable floor for easy cleaning. The interior volume is 14\"x14\"x18\".",
     tools: ["FDM Printer"],
-    taxa: ["Small Primates", "Birds", Small Mammals],
+    taxa: ["Small Primates", "Birds", "Small Mammals"],
     targetBehavior: ["Hiding", "Climbing", "Nesting"],
     species: ["Unspecified"],
     complexity: "Complex Kit",
-    files: ["DXF, BOM, PDF"],
+    files: ["DXF", "BOM", "PDF"],
     notes: "Can be mounted to night house walls.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox",
     images: [
-      "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Render.jpeg",
-      "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Built.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Render.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Built.jpeg"
     ]
   },
 ];
