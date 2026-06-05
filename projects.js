@@ -172,10 +172,10 @@ const PROJECTS = [
   },
     {
     id: "diagonalScreenNestBox",
-    title: "Diag",
+    title: "Diagonal Screen Nest Box",
     author: "Dylan Baldridge",
     contributorZoo: "Memphis Zoo",
-    description: "A 3D printed slow feeder that can be hung from perching. Contains nubs to encourage licking and arboreal foraging behavior.",
+    description: "A wall mounted nest box with a removable floor for easy cleaning. The interior voume is 14"x14"18".",
     tools: ["FDM Printer"],
     taxa: ["Small Primates", "Birds"],
     targetBehavior: ["Foraging", "Climbing"],
@@ -188,5 +188,5 @@ const PROJECTS = [
       "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Render.jpeg",
       "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/diagonalScreenNestBox/pics/Built.jpeg"
     ]
-  },
+  }
 ];
