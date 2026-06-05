@@ -176,7 +176,7 @@ const PROJECTS = [
     author: "Dylan Baldridge",
     contributorZoo: "Memphis Zoo",
     description: "A wall mounted nest box with a removable floor for easy cleaning. The interior volume is 14\"x14\"x18\".",
-    tools: ["FDM Printer"],
+    tools: ["CNC Router"],
     taxa: ["Small Primates", "Birds", "Small Mammals"],
     targetBehavior: ["Hiding", "Climbing", "Nesting"],
     species: ["Unspecified"],
