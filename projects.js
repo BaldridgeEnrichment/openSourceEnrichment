@@ -107,8 +107,8 @@ const PROJECTS = [
     notes: "Epoxy sealing required for watertightness.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/anti-ant-stump",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/Stump.jpeg",
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/DoubleStump.jpeg",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/Stump.jpeg",
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/anti-ant-stump/pics/UnfinishedStump.jpeg"
     ]
   },
