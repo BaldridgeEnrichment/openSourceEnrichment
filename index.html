@@ -609,10 +609,10 @@ function renderOverlayBody() {
     <div class="overlay-footer">
       <div class="file-badges">${p.files.map(f => `<span class="file-badge">${f}</span>`).join('')}</div>
       <a class="view-files-btn ${noUrl ? 'disabled' : ''}"
-         href="${p.downloadUrl || '#'}"
+         href="${noUrl ? '#' : `https://download-directory.github.io/?url=${p.downloadUrl}`}"
          ${noUrl ? '' : 'target="_blank"'}>
-        <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
-        ${noUrl ? 'Files coming soon' : 'View files'}
+        <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+        ${noUrl ? 'Files coming soon' : 'Download files'}
       </a>
     </div>`;
 }
