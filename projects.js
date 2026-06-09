@@ -43,7 +43,7 @@ const PROJECTS = [
     contributorZoo: "Memphis Zoo",
     description: "A 3D printed lotus pod with tapering holes designed to extend foraging duration and promote object manipulation. Can be hung or placed on the ground.",
     tools: ["FDM Printer"],
-    taxa: ["Small Primates", "Small Mammals" "Ant Eaters", "Birds"],
+    taxa: ["Small Primates", "Small Mammals", "Ant Eaters", "Birds"],
     targetBehavior: ["Foraging", "Object Manipulation", "Extractive Foraging"],
     species: [],
     complexity: "Simple",
