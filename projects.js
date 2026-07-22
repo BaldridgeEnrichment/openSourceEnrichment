@@ -89,7 +89,7 @@ const PROJECTS = [
     notes: "Epoxy sealing recommended for sanitation.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/fruut",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/fruut/pics/Fruut.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/fruut/pics/Fruut.jpeg" 
     ]
   },
   {
@@ -204,7 +204,7 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/dishHanger",
     images: [
-      "https://github.com/BaldridgeEnrichment/openSourceEnrichment/blob/main/dishHanger/pics/dishHanger.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/blob/main/dishHanger/pics/dishHanger.jpeg"
     ]
   },
 ];
