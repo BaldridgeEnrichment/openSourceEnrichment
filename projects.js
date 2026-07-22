@@ -204,7 +204,7 @@ const PROJECTS = [
     notes: "",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/dishHanger",
     images: [
-      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/blob/main/dishHanger/pics/dishHanger.jpeg"
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/dishHanger/pics/dishHanger.jpeg"
     ]
   },
 ];
