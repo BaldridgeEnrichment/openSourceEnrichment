@@ -189,4 +189,22 @@ const PROJECTS = [
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/diagonalScreenNestBox/pics/Built.jpeg"
     ]
   },
+    {
+    id: "dishHanger",
+    title: "Dish Hanger",
+    author: "Dylan Baldridge",
+    contributorZoo: "Memphis Zoo",
+    description: "A circular ring food dishes can go in allowing them to be hung from an carabiner.",
+    tools: ["FDM Printer"],
+    taxa: ["Small Primates", "Birds", "Small Mammals"],
+    targetBehavior: ["Climbing", "Foraging"],
+    species: ["Ruffed lemur"],
+    complexity: "Simple",
+    files: ["STL", "BOM"],
+    notes: "",
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/dishHanger",
+    images: [
+      "https://github.com/BaldridgeEnrichment/openSourceEnrichment/blob/main/dishHanger/pics/dishHanger.jpeg"
+    ]
+  },
 ];
