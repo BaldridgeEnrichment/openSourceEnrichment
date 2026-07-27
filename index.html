@@ -153,9 +153,36 @@ main { background: var(--bg); position: relative; z-index: 1; }
     .empty-state svg { width: 48px; height: 48px; fill: var(--border2); margin-bottom: 16px; display: block; margin-inline: auto; }
     .empty-state p { font-size: 14px; margin-top: 8px; }
 
+    /* Further Reading strip */
+    .further-reading {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .further-reading-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--text3); margin-bottom: 14px;
+    }
+    .further-reading-list { display: flex; flex-direction: column; gap: 2px; }
+    .further-reading-item {
+      display: flex; align-items: baseline; gap: 10px;
+      padding: 10px 4px;
+      border-bottom: 1px solid var(--surface2);
+      text-decoration: none;
+      color: inherit;
+    }
+    .further-reading-item:last-child { border-bottom: none; }
+    .further-reading-item svg { width: 14px; height: 14px; fill: var(--text3); flex-shrink: 0; position: relative; top: 3px; }
+    .further-reading-text { display: flex; flex-direction: column; gap: 2px; }
+    .further-reading-title { font-size: 13.5px; font-weight: 500; color: var(--text); }
+    .further-reading-item:hover .further-reading-title { color: var(--accent-dk); text-decoration: underline; }
+    .further-reading-meta { font-size: 12px; color: var(--text3); }
+
     /* Footer */
-    .site-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text3); text-align: center; }
+    .site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text3); text-align: center; }
     .site-footer a { color: var(--text3); }
+    .site-footer p { margin-bottom: 6px; }
+    .site-footer p:last-child { margin-bottom: 0; }
 
     /* ── OVERLAY ─────────────────────────────────────────── */
     .overlay-backdrop {
@@ -333,7 +360,22 @@ main { background: var(--bg); position: relative; z-index: 1; }
     </main>
   </div>
 
+  <!-- Further Reading strip -->
+  <section class="further-reading" aria-label="Further reading">
+    <div class="further-reading-label">Further Reading</div>
+    <div class="further-reading-list">
+      <a class="further-reading-item" href="https://awionline.org/wp-content/uploads/2026/02/3d-printing-animal-welfare.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        <span class="further-reading-text">
+          <span class="further-reading-title">3D Printing for Animal Welfare</span>
+          <span class="further-reading-meta">Animal Welfare Institute — safety, filament choice, and sanitizing guidance for 3D-printed enrichment</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
   <footer class="site-footer">
+    <p>Questions, contributions, or want to share a project? Reach out at <a href="mailto:baldridge.enrichment@gmail.com">baldridge.enrichment@gmail.com</a></p>
     <p>openSourceEnrichment · Open source under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> · <a href="https://github.com/BaldridgeEnrichment/openSourceEnrichment" target="_blank">Contribute on GitHub</a></p>
   </footer>
 </div>
