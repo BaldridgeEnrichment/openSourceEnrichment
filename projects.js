@@ -218,7 +218,7 @@ const PROJECTS = [
     targetBehavior: ["Data Collection", "Animal Health"],
     species: ["Ruffed Lemur"],
     complexity: "Simple",
-    files: ["STL", "PY", "EXE", "APP", "PDF"],
+    files: ["STL", "PY", "EXE", "APP", "XLSM", "PDF"],
     notes: "See proscessing folder for accelerometer data interpretation tools.",
     downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/accelerometerEnrichmentMonitor",
     images: [
