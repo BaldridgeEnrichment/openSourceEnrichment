@@ -207,4 +207,23 @@ const PROJECTS = [
       "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/dishHanger/pics/dishHanger.jpeg"
     ]
   },
+      {
+    id: "accelerometerEnrichmentMonitor",
+    title: "accelerometerEnrichmentMonitor",
+    author: "Dylan Baldridge",
+    contributorZoo: "Memphis Zoo",
+    description: "A 3D printable holder for the WT901SDCL WitMotion accelerometer that can be cliped to enrihcment to monitor engagement with devices.",
+    tools: ["FDM Printer"],
+    taxa: ["Small Primates"],
+    targetBehavior: ["Animal Health"],
+    species: ["Ruffed Lemur"],
+    complexity: "Simple",
+    files: ["STL", "Python", "PDF"],
+    notes: "Can be mounted to night house walls.",
+    downloadUrl: "https://github.com/BaldridgeEnrichment/openSourceEnrichment/tree/main/accelerometerEnrichmentMonitor",
+    images: [
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/accelerometerEnrichmentMonitor/pics/AccelOpen.JPG",
+      "https://raw.githubusercontent.com/BaldridgeEnrichment/openSourceEnrichment/main/accelerometerEnrichmentMonitor/pics/AccelClosed.JPG"
+    ]
+  },
 ];
