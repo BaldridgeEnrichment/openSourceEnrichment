@@ -209,7 +209,7 @@ const PROJECTS = [
   },
       {
     id: "accelerometerEnrichmentMonitor",
-    title: "accelerometerEnrichmentMonitor",
+    title: "Accelerometer Enrichment Monitor",
     author: "Dylan Baldridge",
     contributorZoo: "Memphis Zoo",
     description: "A 3D printable holder for the WT901SDCL WitMotion accelerometer that can be cliped to enrihcment to monitor engagement with devices.",
